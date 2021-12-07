@@ -1,0 +1,71 @@
+@willandru
+Kali Linux
+PERN STACK APPLICATION: NOTES
+December-07-2021
+-----------------------------------------------------------
+                HOW TO DEV PERN
+-----------------------------------------------------------
+INIT THE PROJECT
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Soo first of all, have to have installed npm and postgresql
+
+:: 
+npm init i --> will create config files
+
+::Install dependencies
+ npm i express morgan cors            
+
+::Install Dev dependencies
+npm i nodemon -D  
+
+::Change package.json   
+"scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  }
+:: Create folders and files asrchitecture.
+-----------------------------------------------------------
+-----------------------------------------------------------
+ENDPOINTS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tasks.routes.js
+ Vamos a definir las URLS que el frontend va a poder utilizar para poder hacer operaciones
+
+ funcion router desde express---> devuelve un objeto llamado router, que nos va a permitir crear las URLS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+express=require ('express');
+app=express();
+
+ >>{ Router } = require('express');
+>> router = Router()
+>>router.get('/', (req,res)=>{
+    res.send('Hello World');
+})
+>>taskRoutes=require('')
+>>app.use(taskRoutes);
+>>app.listen(3000);

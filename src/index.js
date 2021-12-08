@@ -4,9 +4,15 @@ const app = express();
 
 
 
+const morgan= require('morgan')
+app.use(morgan('dev'))
+
+
+app.use(express.json());
 
 const taskRoutes = require('./routes/tasks.routes');
 app.use(taskRoutes);
+
 
 
 

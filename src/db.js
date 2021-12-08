@@ -1,5 +1,6 @@
 const { Pool } = require('pg')
 
+//AUTHENTICANDOSE A POSTGRESQL**
 const pool = new Pool({
     user: 'postgres',
     password: 'kali00',

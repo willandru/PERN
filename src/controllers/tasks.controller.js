@@ -1,20 +1,42 @@
+
+const pool = require('../db')
+
+
 const createTask = async (req,res)=>{
-    res.send('Crating a list of tasks')
+
+    /* const task = req.body
+    console.log(task) */
+
+    const {title, description} = req.body
+    //console.log(title, description);
+
+
+const result = await pool.query("INSERT INTO task (title, description) VALUES($1,$2)",[
+    title,
+    description
+]);
+
+
+    /* const result = await pool.query("INSERT INTO task (title, description) VALUES ($1,$2)", [
+        title, 
+        description
+    ]); */
+    console.log(result); 
+
+    res.send('W:Crating a tasks')
 }
 const readAllTasks = async (req,res)=>{
-    res.send('Reading a list of tasks')
+    res.send('W:Reading a list of tasks')
 }
 const readTask = async (req,res)=>{
-    res.send('Reading one task')
+    res.send('W:Reading one task')
 }
 const updateTask = async (req,res)=>{
-    res.send('Updating a  task')
+    res.send('W:Updating a  task')
 }
 const deleteTask = async (req,res)=>{
-    res.send('Deliting a task')
+    res.send('W: Deliting a task')
 }
-
-
 module.exports={
     createTask,
     readTask,

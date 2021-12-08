@@ -3,6 +3,11 @@
 const { Router } = require('express');
 const router = Router()
 
+//EL OBJETO DE LA BASE DE DATOS
+
+const pool = require('../db');
+
+
 //CRUD '/task'
 
     //CREATE A NEW TASK
@@ -10,8 +15,11 @@ const router = Router()
         res.send('Crating a list of tasks');
     })
     //READ A TASK
-    router.get('/tasks', (req,res)=>{
+    router.get('/tasks', async (req,res)=>{
         res.send('Retriving a list of tasks');
+        const result = await pool.query('SELECT NOW()')
+        console.log(result)
+        res.json('executed')
     })
     //UPDATE A TASK
     router.put('/tasks', (req,res)=>{

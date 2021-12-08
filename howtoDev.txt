@@ -33,8 +33,12 @@ tasks.routes.js
 
  funcion router desde express---> devuelve un objeto llamado router, que nos va a permitir crear las URLS
 
+Se creo el CRUD de la aplicación
+-----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+CONEXION A LA BASE DE DADTOS
 
-
+npm i pg
 
 
 

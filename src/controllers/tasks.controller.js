@@ -11,22 +11,26 @@ const createTask = async (req,res)=>{
     //console.log(title, description);
 
 
-const result = await pool.query("INSERT INTO task (title, description) VALUES($1,$2)",[
-    title,
-    description
-]);
+    try{
+        const result = await pool.query("INSERT INTO task (title, description) VALUES($1,$2) RETURNING *",[
+            title,
+            description
+        ]);
+        res.json(result.rows[0])
+    }catch(error){
+        //console.log(error.message)
+        res.json({error: error.message})
+    }
 
-
-    /* const result = await pool.query("INSERT INTO task (title, description) VALUES ($1,$2)", [
-        title, 
-        description
-    ]); */
-    console.log(result); 
-
-    res.send('W:Crating a tasks')
 }
 const readAllTasks = async (req,res)=>{
-    res.send('W:Reading a list of tasks')
+    
+    try {
+    const allTasks= await pool.query('SELECT * FROM task')
+    res.json(allTasks.rows);
+    } catch (error) {
+        console.log(error.message);
+    }
 }
 const readTask = async (req,res)=>{
     res.send('W:Reading one task')

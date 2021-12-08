@@ -16,10 +16,12 @@ const pool = require('../db');
     })
     //READ A TASK
     router.get('/tasks', async (req,res)=>{
-        res.send('Retriving a list of tasks');
+         //res.send('Retriving a list of tasks');
         const result = await pool.query('SELECT NOW()')
         console.log(result)
-        res.json('executed')
+        
+        res.json(result.rows[0].now)
+       // res.json('executed') 
     })
     //UPDATE A TASK
     router.put('/tasks', (req,res)=>{

@@ -1,0 +1,4 @@
+#NODEJS
+node_modules
+# ENVIRONMENT VARIABLES
+.env

@@ -2,7 +2,9 @@
 const express = require ('express');
 const app = express();
 
-
+//para conectar backend-frontend
+const cors = require('cors')
+app.use(cors());
 
 const morgan= require('morgan')
 app.use(morgan('dev'))

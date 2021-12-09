@@ -1,12 +1,13 @@
 const { Pool } = require('pg')
 
+const {db} = require('./config')
 //AUTHENTICANDOSE A POSTGRESQL**
 const pool = new Pool({
-    user: 'postgres',
-    password: 'kali00',
-    host: 'localhost',
-    port: '5432',
-    database: 'tasksdb'
+    user: db.user,
+    password: db.password,
+    host: db.host,
+    port: db.port,
+    database: db.database,
 })
 
 

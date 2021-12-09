@@ -43,7 +43,22 @@ npm i pg
 --------------------------------------------------------------
 --------------------------------------------------------------
 
+CREAR FUNCIONES CRUD y manejar los errores con el framework de express
+__________________________________________________________---
+__________________________________________________________---
 
+OCULTAR LAS CREDENCIALES, CREAR ARCHIVHOVO DE CONFIGURACION 
+  
+npm i dotenv
+
+terminarmos creando el archivo .env para cuadrar las configuraciones en config.js
+y creamos el archivo .gitignore
+-----------------------------------------------------------------
+-----------------------------------------------------------
+CONECTAMOS EL BACKEND CON EL FRONTEND
+
+Por ultimo conectamos el backen
+ya instalado el module 'corse', simplemente lo requerimos en index.js
 
 
 

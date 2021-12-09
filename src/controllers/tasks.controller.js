@@ -7,30 +7,31 @@ const createTask = async (req, res, next) => {
     /* const task = req.body
     console.log(task) */
 
-    const { title, description } = req.body
+    
     //console.log(title, description);
 
 
     try {
+        const { title, description } = req.body
         const result = await pool.query("INSERT INTO task (title, description) VALUES($1,$2) RETURNING *", [
             title,
             description
         ]);
-        res.json(result.rows[0])
+        res.json(result.rows[0]);
     } catch (error) {
         //console.log(error.message)
-       next(error)
+       next(error);
     }
 
 }
 const readAllTasks = async (req, res, next) => {
 
     try {
-        throw new Error('Algo Fue Mal')
-        const allTasks = await pool.query('SELECT * FROM task')
+        
+        const allTasks = await pool.query("SELECT * FROM task")
         res.json(allTasks.rows);
     } catch (error) {
-        next(error)
+        next(error);
     }
 }
 const readTask = async (req, res, next) => {

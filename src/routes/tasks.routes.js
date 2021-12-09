@@ -14,7 +14,7 @@ const { deleteTask,
 router.post('/tasks', createTask)
 router.get('/tasks/:id', readTask)
 router.get('/tasks', readAllTasks)
-router.put('/tasks', updateTask)
+router.put('/tasks/:id', updateTask)
 router.delete('/tasks/:id', deleteTask)
 
 // exportamos el router

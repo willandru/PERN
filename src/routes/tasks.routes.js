@@ -12,7 +12,7 @@ const { deleteTask,
 
 //CREAMOS LAS URLS
 router.post('/tasks', createTask)
-router.get('/tasks/10', readTask)
+router.get('/tasks/:id', readTask)
 router.get('/tasks', readAllTasks)
 router.put('/tasks', updateTask)
 router.delete('/tasks', deleteTask)

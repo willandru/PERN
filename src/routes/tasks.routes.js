@@ -15,7 +15,7 @@ router.post('/tasks', createTask)
 router.get('/tasks/:id', readTask)
 router.get('/tasks', readAllTasks)
 router.put('/tasks', updateTask)
-router.delete('/tasks', deleteTask)
+router.delete('/tasks/:id', deleteTask)
 
 // exportamos el router
 module.exports = router;

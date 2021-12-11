@@ -1,10 +1,8 @@
 
-export default class TaskForm extends PureComponent {
-    render() {
-        return (
-            <div>
-                Task Form
-            </div>
-        )
-    }
+export default function TaskForm()  {
+    return (
+        <div>
+            Task Form
+        </div>
+    )
 }

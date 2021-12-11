@@ -1,5 +1,5 @@
 
-export default class NavBar extends PureComponent {
+export default class NavBar{
     render() {
         return (
             <div>

@@ -76,11 +76,21 @@ rpc ::: --> react pure component
 Queremos crear URLS especificas ara el front-end y siempre devolver NavBar, los otros dependiendo.
 Estando en la carpeta /client/
 npn i react-router-dom
+---------------------------------------------------------------
+---------------------------------------------------------------
+USAREMOS MATERIAL utilizar
 
+en la carpeta client, installamos Material utilizar
+npm install @mui/material @emotion/react @emotion/styled
 
-
-
-
+Luego ponemos la fuente Roboto front, en /client/public/index.html
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+/>
+Font Icons tambien , ahi debajo de Roboto Font
+Ademas vamos a instalar inconos svg con un modulo npm
+npm install @mui/icons-material
 
 
 

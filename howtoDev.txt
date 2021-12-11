@@ -60,8 +60,10 @@ CONECTAMOS EL BACKEND CON EL FRONTEND
 Por ultimo conectamos el backen
 ya instalado el module 'corse', simplemente lo requerimos en index.js
 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
 
-
+INICIAMOS CON FRONT-END
 
 
 

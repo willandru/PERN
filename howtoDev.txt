@@ -65,7 +65,17 @@ ya instalado el module 'corse', simplemente lo requerimos en index.js
 
 INICIAMOS CON FRONT-END
 
+Iniciamos haciendo:
+npx create-react-app
+--> Se abre otro puerto (3001)
 
+Hacemos un Hello World REACTIVE from /client/src/App.js
+Creamos los componentes
+rpc ::: --> react pure component
+
+Queremos crear URLS especificas ara el front-end y siempre devolver NavBar, los otros dependiendo.
+Estando en la carpeta /client/
+npn i react-router-dom
 
 
 
